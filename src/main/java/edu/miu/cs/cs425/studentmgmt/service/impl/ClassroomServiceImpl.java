@@ -32,7 +32,8 @@ public class ClassroomServiceImpl implements ClassroomService {
 
     @Override
     public Classroom updateClassroom(Classroom newClassroom) {
-        return getClassroomById(newClassroom.getClassroomId());
+        getClassroomById(newClassroom.getClassroomId());
+        return classroomRepository.save(newClassroom);
     }
 
     @Override

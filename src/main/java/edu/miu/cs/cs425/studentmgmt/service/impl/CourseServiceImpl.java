@@ -31,7 +31,8 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course updateCourse(Course newCourse) {
-        return getCourseById(newCourse.getCourseId());
+        getCourseById(newCourse.getCourseId());
+        return courseRepository.save(newCourse);
     }
 
     @Override
